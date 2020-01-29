@@ -1,0 +1,148 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(168, 34, 221), rgb(116, 218, 0));
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    z-index: 999;
+    filter: drop-shadow(1px 5px 10px black);
+    justify-content: space-between;
+}
+
+nav .label {
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.controls {
+    display: flex;
+    /* justify-self: flex-end; */
+    justify-content: end;
+    font-size: 1.5em;
+}
+
+.controls a {
+    text-decoration: none;
+}
+
+.controls>div {
+    margin: 0 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.home {
+    color: blue;
+    padding: 10px 0px;
+    margin: 0px 30px;
+    width: 4em;
+    position: relative;
+}
+
+.home:hover {
+    color: green;
+}
+
+.home::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: rgb(255, 0, 242);
+    height: 3px;
+    bottom: 0;
+    transform: scaleX(1);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.home:hover::after {
+    transform: scaleX(0);
+}
+
+.container {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.search-wrapper {
+    padding-top: 100px;
+}
+
+.search-opts {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, blue, red);
+    padding: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.year-section {
+    display: flex;
+}
+
+select {
+    appearance: none;
+    padding: 10px 30px;
+    width: 100%;
+    font-weight: bold;
+}
+
+select option {
+    font-size: 1em;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+.download {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2em;
+    background: rgb(0, 255, 85);
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 10px black);
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.download:hover {
+    filter: drop-shadow(2px 2px 3px black);
+    border: 1px solid cyan;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 2em;
+    padding: 10px 30px;
+    color: rgb(2, 9, 26);
+    align-self: stretch;
+    text-transform: capitalize;
+}
